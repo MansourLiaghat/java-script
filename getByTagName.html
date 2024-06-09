@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getByTagName</title>
+</head>
+<body>
+
+<a href="">link1</a>
+<a href="">link2</a>
+<a href="">link3</a>
+<a href="">link4</a>
+<a href="">link5</a>
+<hr>
+<h1>title1</h1>
+<h1>title2</h1>
+<h1>title3</h1>
+<h1>title4</h1>
+<h1>title5</h1>
+<hr>
+<script>
+
+    // Display all titles in one second
+    title = document.getElementsByTagName('h1');
+    var i = 0;
+    setInterval(function () {
+        console.log(title[i].innerText);
+        i++;
+    }, 1000);
+
+
+    // Remove all links in one second
+    links = document.getElementsByTagName('a');
+    var i = 0;
+    setInterval(function () {
+        console.log(links[0].remove());
+    }, 1000);
+
+</script>
+
+</body>
+</html>
