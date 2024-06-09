@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+</head>
+<body>
+
+
+<a href="">link1</a>
+<a href="">link2</a>
+<a href="">link3</a>
+<a href="">link4</a>
+<a href="">link5</a>
+<hr>
+<h1>title1</h1>
+<h1>title2</h1>
+<h1>title3</h1>
+<h1>title4</h1>
+<h1>title5</h1>
+<hr>
+
+
+<script>
+
+    // Any class that is clicked - its content will be displayed
+    $('*').click(function (event){
+        event.stopPropagation();
+        alert($(this).html());
+    });
+
+
+    // Any class that is clicked - delete its content
+    $('*').click(function (event){
+        event.stopPropagation();
+        $(this).remove()
+    });
+
+
+    // Any class that is clicked - its content will be removed as an animation
+    $('*').click(function (event){
+        event.stopPropagation();
+        $(this).fadeout(500);
+    });
+
+
+    // Any class that is clicked - the requested content will be displayed as an animation
+    // h1=parent & code=child
+
+    $('h1').click(function (event){
+        event.stopPropagation();
+        $(this).find('code').fadein(500);
+    });
+
+
+</script>
+
+</body>
+</html>
