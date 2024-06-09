@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing</title>
+</head>
+<body>
+
+
+<script>
+
+    var magicNumber = Math.floor(Math.random() * 100);
+    var score = 100;
+    var tries = 0;
+
+    while (magicNumber != myN) {
+        score -= 10;
+        tries += 1;
+        var myN = prompt('Please Enter a Number' + ' ' + magicNumber + ' / ' + "emtiaze shoma :" + ' ' + score);
+        if (myN == 'end' || score == 0) {
+            break;
+        }
+
+        if (magicNumber == myN) {
+            console.log('You WIN With' + ' ' + tries + ' tries');
+            break;
+        } else if (magicNumber > myN) {
+            console.log('Your Number Is Lower');
+        } else {
+            console.log('Yor Number Is Biger');
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>
